@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: black;
+        color: green;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
+      canvas {
+        border: 2px solid white;
+        background-color: black;
+      }
+      #startBtn,
+      #retryBtn {
+        padding: 10px 20px;
+        font-size: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: none;
+      }
+      #retryBtn {
+        background-color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SNAKE GAME</h1>
+    <p>Press W A S D or arrows to MOVE AROUND.</p>
+    <button id="startBtn">START</button>
+    <canvas
+      id="gameCanvas"
+      width="400"
+      height="400"
+      style="display: none"
+    ></canvas>
+    <h1 id="gameOverText" style="display: none; color: red">YOU LOST!</h1>
+    <button id="retryBtn">Try again?</button>
+
+    <script>
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+      const box = 40;
+      let snake, direction, apple;
+      let gameInterval;
+
+      document.getElementById("startBtn").addEventListener("click", startGame);
+      document.getElementById("retryBtn").addEventListener("click", startGame);
+
+      function startGame() {
+        document.getElementById("startBtn").style.display = "none";
+        document.getElementById("retryBtn").style.display = "none";
+        document.getElementById("gameOverText").style.display = "none";
+        canvas.style.display = "block";
+
+        snake = [{ x: 0, y: 0 }];
+        direction = "RIGHT";
+        apple = randomApple();
+        gameInterval = setInterval(draw, 200);
+      }
+
+      document.addEventListener("keydown", changeDirection);
+      function changeDirection(event) {
+        const key = event.key;
+        if ((key === "ArrowUp" || key === "w") && direction !== "DOWN")
+          direction = "UP";
+        else if ((key === "ArrowDown" || key === "s") && direction !== "UP")
+          direction = "DOWN";
+        else if ((key === "ArrowLeft" || key === "a") && direction !== "RIGHT")
+          direction = "LEFT";
+        else if ((key === "ArrowRight" || key === "d") && direction !== "LEFT")
+          direction = "RIGHT";
+      }
+
+      function draw() {
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(apple.x, apple.y, box, box);
+
+        snake.forEach((segment, index) => {
+          ctx.fillStyle = "blue";
+          ctx.fillRect(segment.x, segment.y, box, box);
+
+          if (index === 0) drawEyes(segment.x, segment.y);
+        });
+
+        let headX = snake[0].x;
+        let headY = snake[0].y;
+        if (direction === "UP") headY -= box;
+        if (direction === "DOWN") headY += box;
+        if (direction === "LEFT") headX -= box;
+        if (direction === "RIGHT") headX += box;
+
+        let newHead = { x: headX, y: headY };
+        if (headX === apple.x && headY === apple.y) {
+          apple = randomApple();
+        } else {
+          snake.pop();
+        }
+
+        if (
+          snake.some(
+            (segment) => segment.x === newHead.x && segment.y === newHead.y
+          ) ||
+          headX < 0 ||
+          headY < 0 ||
+          headX >= canvas.width ||
+          headY >= canvas.height
+        ) {
+          endGame();
+          return;
+        }
+
+        snake.unshift(newHead);
+      }
+
+      function drawEyes(x, y) {
+        ctx.fillStyle = "white";
+        ctx.fillRect(x + 7, y + 10, 15, 15);
+        ctx.fillRect(x + 28, y + 10, 15, 15);
+        ctx.fillStyle = "black";
+        ctx.fillRect(x + 11, y + 14, 7, 7);
+        ctx.fillRect(x + 32, y + 14, 7, 7);
+      }
+
+      function randomApple() {
+        return {
+          x: Math.floor(Math.random() * 10) * box,
+          y: Math.floor(Math.random() * 10) * box,
+        };
+      }
+
+      function endGame() {
+        clearInterval(gameInterval);
+        document.getElementById("gameOverText").style.display = "block";
+        document.getElementById("retryBtn").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
