@@ -98,3 +98,13 @@ html {
   padding: 20px;
   text-align: center;
 }
+
+button {
+  background-color: #9d0000;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #650000;
+  color: #9d0000;
+}
