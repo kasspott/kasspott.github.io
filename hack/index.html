@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <meta name="description" content="An interestng website." />
+
+    <link rel="stylesheet" href="src/css/css.css" />
+    <style>
+      .alert-box {
+        position: absolute;
+        background: red;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        box-shadow: 2px 2px 10px black;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <button onclick="pokazAlert()">STOP</button>
+    </div>
+    <script>
+      function getRandomPosition() {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        return { x, y };
+      }
+
+      setInterval(() => {
+        const alertBox = document.createElement("div");
+        alertBox.className = "alert-box";
+        alertBox.textContent = "⚠️ YOU HAVE BEEN HACKED";
+
+        const { x, y } = getRandomPosition();
+        alertBox.style.left = x + "px";
+        alertBox.style.top = y + "px";
+
+        document.body.appendChild(alertBox);
+      }, 100); // New alert every 100ms
+    </script>
+    <script>
+      function getRandomPosition() {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        return { x, y };
+      }
+    </script>
+  </body>
+  <script src="src/js.js"></script>
+</html>
