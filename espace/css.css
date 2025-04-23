@@ -1,0 +1,100 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 {
+  background-image: url("img/1.jpg");
+}
+.img2 {
+  background-image: url("img/2.jpg");
+}
+.img3 {
+  background-image: url("img/3.jpg");
+}
+.img4 {
+  background-image: url("img/4.jpg");
+}
+.img5 {
+  background-image: url("img/5.jpg");
+}
+.img6 {
+  background-image: url("img/6.jpg");
+}
+.img7 {
+  background-image: url("img/7.jpg");
+}
+.img8 {
+  background-image: url("img/8.jpg");
+}
+.img9 {
+  background-image: url("img/9.jpg");
+}
+.img10 {
+  background-image: url("img/10.jpg");
+}
+.img11 {
+  background-image: url("img/11.jpg");
+}
+.img12 {
+  background-image: url("img/12.jpg");
+}
+.img13 {
+  background-image: url("img/13.jpg");
+}
+.img14 {
+  background-image: url("img/14.jpg");
+}
+.img15 {
+  background-image: url("img/15.jpg");
+}
+.img16 {
+  background-image: url("img/16.jpg");
+}
+.img17 {
+  background-image: url("img/17.jpg");
+}
+.img18 {
+  background-image: url("img/18.jpg");
+}
+.img19 {
+  background-image: url("img/19.jpg");
+}
+.img20 {
+  background-image: url("img/20.jpg");
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 40px;
+  border: 10px solid #9d0000;
+  position: fixed; /* Stay fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
