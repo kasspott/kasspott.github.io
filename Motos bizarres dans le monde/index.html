@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motos bizarres dans le monde</title>
+    <meta
+      name="description"
+      content="Motos trop bizarres dans le monde. Honda, Yamaha et autres."
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <span class="nbr">016.</span> motos <span>bizarres</span> dans le monde
+      </h1>
+      <h2>
+        <p>.</p>
+        <p>.</p>
+        <p>↓</p>
+      </h2>
+    </header>
+
+    <!-- LEFT FILTERS -->
+
+    <nav id="filters" style="background-color: black">
+      <div
+        id="left-filters"
+        style="display: inline-block; margin: 0; background-color: black"
+      >
+        Sort by:
+        <input id="selaz" type="radio" name="radAnswer" checked /><label
+          for="selaz"
+          >A-Z</label
+        >
+        <input id="selyear" type="radio" name="radAnswer" /><label for="selyear"
+          >Year</label
+        >
+        <!--  <button class="filter-btn" data-filters="all">A-Z</button>-->
+        <!-- <button class="filter-btn" data-filters="all">Year of built</button>-->
+      </div>
+
+      <!-- RIGHT FILTERS -->
+
+      <div id="right-filters">
+        <label for="roof"
+          >Roof?
+          <select
+            id="roof"
+            name="roof"
+            style="text-align: center; background-color: black; color: red"
+          >
+            <option value="-">-</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+
+        <label for="wheels"
+          >Number of wheels:
+          <select
+            id="wheels"
+            name="wheels"
+            style="text-align: center; background-color: black; color: red"
+          >
+            <option value="-">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+      </div>
+    </nav>
+
+    <!-- BIKES -->
+
+    <main>
+      <section class="brand">
+        <div class="brand__sidebar">
+          <button class="filter-btn" data-brand="all">Tout voir</button>
+          <button class="filter-btn" data-brand="honda">Honda</button>
+          <button class="filter-btn" data-brand="yamaha">Yamaha</button>
+        </div>
+        <div class="brand__bikes">
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video
+              id="Dodge_Tomahawk"
+              muted
+              loop
+              src="src/img/Dodge_Tomahawk.mp4"
+              type="video/mp4"
+              alt="Dodge_Tomahawk"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Dodge Tomahawk</span> -
+              <span class="bike-year">2004</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Dodge Tomahawk is a concept motorcycle unveiled in 2003,
+                known for its futuristic design and extreme performance. It
+                features an 8.3-liter V10 engine from the Dodge Viper, producing
+                around 500 horsepower. With a unique four-wheel design (two
+                front and two rear wheels), it was engineered more as a
+                showpiece than a street-legal vehicle. The Tomahawk is capable
+                of reaching theoretical speeds over 300 mph, making it one of
+                the most powerful and visually striking motorcycles ever
+                created.
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video
+              muted
+              loop
+              src="src/img/Electrom_lev.mp4"
+              alt="Electrom LEV"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Electrom LEV</span> -
+              <span class="bike-year">2019</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Electrom LEV (Light Electric Vehicle) Motorcycle is a
+                streamlined, pedal-assisted electric motorcycle designed for
+                high-efficiency urban and long-distance travel. Featuring a
+                recumbent riding position, enclosed bodywork, and a robust
+                electric drivetrain, it combines the speed and power of a
+                motorcycle with the efficiency and comfort of an e-bike. With a
+                top speed of around 100 km/h (62 mph) and a range exceeding 200
+                km (124 miles), the Electrom LEV offers a unique alternative to
+                traditional motorcycles and electric bicycles.
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item" data-wheel="2" data-roof="Yes">
+            <video muted loop src="src/img/Quasar.mp4" alt="Quasar"></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Quasar</span> -
+              <span class="bike-year">2005</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Quasar is a rare British motorcycle from the 1970s–80s,
+                known for its unique feet-forward riding position and
+                semi-enclosed design. Powered by a Reliant 850cc engine, it
+                offered car-like comfort, weather protection, and strong
+                performance, with only 21 units ever made. Powered by an 850cc
+                water-cooled four-cylinder engine sourced from the Reliant
+                Robin, the Quasar delivers approximately 41 horsepower, enabling
+                cruising speeds between 90–100 mph (145–160 km/h) and potential
+                top speeds exceeding 100 mph under favourable conditions.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="grid-item"
+            data-brand="yamaha"
+            data-wheel="3"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Yamaha_Niken.mp4"
+              alt="Yamaha Niken"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Yamaha Niken</span> -
+              <span class="bike-year">2018</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                ​The Yamaha Niken is a pioneering three-wheeled motorcycle that
+                redefines cornering stability and rider confidence. Introduced
+                in 2018, it features Yamaha’s Leaning Multi-Wheel (LMW)
+                technology, allowing the two front wheels to tilt in unison,
+                delivering exceptional grip and control, especially in
+                challenging riding conditions. Powered by an 847cc liquid-cooled
+                inline three-cylinder engine, the Niken produces 115 horsepower
+                at 10,000 rpm and 87.5 Nm of torque at 8,500 rpm . Its advanced
+                chassis includes dual 15-inch front wheels with independent
+                suspension, enabling a lean angle of up to 45 degrees, and a
+                17-inch rear wheel. The bike comes equipped with a suite of
+                rider aids, including ABS, traction control, cruise control, and
+                a quick-shift system
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video
+              muted
+              loop
+              src="src/img/Rokon_360.mp4"
+              alt="Rokon_360"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Rokon 360</span> -
+              <span class="bike-year">1971</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                ​The Rokon 360 is a rugged, American-made, two-wheel-drive
+                motorcycle designed for extreme off-road conditions. Equipped
+                with a 208cc Kohler four-stroke engine producing 7 HP, it
+                features a full-time front and rear wheel drive system, enabling
+                it to climb 60% grades and ford water up to 24 inches deep . Its
+                hollow aluminum drum wheels can store up to 2.5 gallons of fuel
+                or water each, and when empty, provide enough buoyancy for the
+                bike to float. With a dry weight of 218 lbs and a payload
+                capacity of 600 lbs, the Rokon 360 is built for durability and
+                versatility. It offers a top speed of approximately 59.55 km/h
+                and includes features like an automatic torque converter,
+                three-speed transmission, and hydraulic disc brakes
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video
+              muted
+              loop
+              src="src/img/Alligator.mp4"
+              alt="Alligator"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Alligator</span> -
+              <span class="bike-year">2002</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Alligator Motorcycle is a custom, high-performance bike
+                designed for both off-road and on-road use. Powered by a 600cc
+                to 1200cc V-twin or parallel-twin engine, it features a rugged
+                steel or aluminum frame, long-travel suspension, and oversized
+                knobby tires for superior traction. The bike includes hydraulic
+                disc brakes, a large-capacity fuel tank (12-20 liters), and
+                modern electronics like GPS and electronic fuel injection (EFI).
+                With a bold, reptile-inspired design, it combines durability,
+                style, and power, making it ideal for adventurous riders seeking
+                performance on diverse terrains.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="grid-item"
+            data-brand="honda"
+            data-wheel="2"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Honda_e-NSR.mp4"
+              alt="Honda_e-NSR"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Honda e-NSR</span> -
+              <span class="bike-year">2001</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Honda e-NSR is a concept electric motorcycle unveiled at the
+                2001 Tokyo Motor Show. Designed to mirror the sporty NSR series,
+                it features an electric powertrain, a compact and aerodynamic
+                frame, and advanced suspension technology. The e-NSR's
+                performance focused on lightweight handling and efficient energy
+                use, with a top speed optimized for city and track use. Although
+                it was never mass-produced, the e-NSR served as an early example
+                of Honda's potential in electric motorcycles, showcasing the
+                integration of high-performance design and electric mobility.
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            data-brand="honda"
+            data-wheel="2"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Honda_riding_assist.mp4"
+              alt="Honda_riding_assist"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Honda Riding Assist</span> -
+              <span class="bike-year">2017</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                Honda Riding Assist is an advanced self-balancing technology
+                designed for motorcycles, using robotics-derived systems rather
+                than traditional gyroscopes. The system utilizes a steer-by-wire
+                mechanism to electronically control the angle of the front fork
+                and subtly adjust the front wheel’s direction, maintaining
+                balance without rider input. This system is based on
+                technologies from Honda’s UNI-CUB mobility device and ASIMO
+                robot. The Riding Assist technology allows the motorcycle to
+                stay upright at low speeds and when stationary. It also features
+                the ability to autonomously follow the rider at walking speed.
+                This reduces the risk of tipping over, making it ideal for
+                novice riders, those with shorter stature, or when navigating
+                tight spaces.
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            data-brand="honda"
+            data-wheel="2"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Motocompo_honda.mp4"
+              alt="Motocompo"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Honda Motocompo / BOXX</span> -
+              <span class="bike-year">1981</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Honda Motocompo is a compact and unique folding scooter
+                introduced in 1981. Designed to fit in the trunk of Honda's City
+                car, it became an innovative solution for urban mobility.
+                Powered by a 49cc two-stroke engine, it could reach a top speed
+                of around 30 mph (48 km/h). Its small size, lightweight frame,
+                and folding design made it a perfect companion for city dwellers
+                looking for an easy and efficient way to navigate through
+                traffic. The Motocompo was a quirky, fun addition to Honda's
+                lineup, blending practicality with an unmistakable retro charm.
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            data-brand="honda"
+            data-wheel="3"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Honda_ATC_250r.mp4"
+              alt="Honda ARC 250 r"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Honda ATC 250r</span> -
+              <span class="bike-year">1981</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Honda ATC 250R is a three-wheeled all-terrain vehicle (ATV)
+                produced from 1981 to 1986, specifically designed for
+                high-performance off-road riding. It is powered by a 246cc,
+                air-cooled, two-stroke single-cylinder engine, delivering strong
+                performance with a 6-speed manual transmission and a chain final
+                drive. The engine utilizes a reed valve system for improved fuel
+                efficiency and power delivery. The ATC 250R features a
+                single-shock rear suspension with a long-travel, independent
+                front suspension (leading-axle design), allowing it to handle
+                rough terrains with better stability and comfort. This model is
+                known for its agile handling, thanks to a combination of a short
+                wheelbase, low center of gravity, and strong performance.
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            data-brand="honda"
+            data-wheel="2"
+            data-roof="No"
+          >
+            <video
+              muted
+              loop
+              src="src/img/Honda_Koraidon.mp4"
+              alt="Honda_Koraidon"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Honda Pokemon Koraidon</span> -
+              <span class="bike-year">2025</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Honda Koraidon is a life-sized concept motorcycle inspired
+                by the legendary Pokémon Koraidon from *Pokémon Scarlet*.
+                Standing 2.5 meters tall and weighing 303 kg, it features
+                cutting-edge technology, including Honda’s Riding Assist system,
+                which allows it to balance itself and transition between two
+                modes: a "Sprinting Build" that mimics Koraidon’s running
+                posture and a "Walking Build" with four-legged movement. The
+                bike is also equipped with animated eyes, facial expressions,
+                and limb movements that change with speed, giving it a lifelike
+                appearance. The Honda Koraidon showcases Honda’s innovative
+                approach to merging mobility with Pokémon fandom, making its
+                debut in 2025.
+              </div>
+            </div>
+          </div>
+          <div class="grid-item" data-wheel="2" data-roof="Yes">
+            <video muted loop src="src/img/BMW_C1.mp4" alt="BMW_C1"></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">BMW C1</span> -
+              <span class="bike-year">2000</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The BMW C1 is a unique scooter-style motorcycle produced by BMW
+                from 2000 to 2003. It features a fully enclosed cabin with a
+                built-in safety roll cage, seatbelts, and a helmet, offering
+                protection similar to that of a car. This innovative design
+                aimed to provide a safer and more comfortable riding experience
+                in urban environments. Powered by a 125cc or 200cc engine, the
+                C1 was designed for city commuting, offering excellent fuel
+                efficiency and easy handling. Although it was ahead of its time,
+                the C1 was discontinued due to limited market appeal and high
+                production costs.
+              </div>
+            </div>
+          </div>
+          <div class="grid-item" data-wheel="2" data-roof="Yes">
+            <video
+              muted
+              loop
+              src="src/img/Grafika_bez_nazwy.mp4"
+              alt="PeravesMonoTracer"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Peraves Mono Tracer</span> -
+              <span class="bike-year">2008</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The Peraves MonoTracer is a Swiss-designed cabin motorcycle that
+                combines the excitement of a motorcycle with the safety and
+                comfort of a car. Powered by a 1,200cc BMW engine, it offers
+                impressive performance, reaching speeds over 250 km/h. The
+                enclosed body provides protection from the elements, while
+                features like ABS, stability control, and deployable stabilizer
+                wheels enhance safety. Inside, it boasts RECARO seats, air
+                conditioning, and a high-quality sound system. With its unique
+                design and limited production, the MonoTracer is an exclusive,
+                high-performance vehicle.
+              </div>
+            </div>
+          </div>
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video
+              muted
+              loop
+              src="src/img/Mtt_420_rr.mp4"
+              alt="Mtt420rr"
+            ></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Mtt 420 rr</span> -
+              <span class="bike-year">2000</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                The MTT 450RR is a high-performance, turbine-powered motorcycle
+                with a Rolls-Royce Allison 250 engine, delivering 420 horsepower
+                and a top speed over 440 km/h. It features a lightweight carbon
+                fiber frame, Öhlins suspension, and Dymag carbon wheels for
+                exceptional handling. With a 34-liter fuel tank and a 2-speed
+                automatic transmission, this bike blends cutting-edge technology
+                with extreme speed, making it one of the fastest production
+                motorcycles.
+              </div>
+            </div>
+          </div>
+          <div class="grid-item" data-wheel="2" data-roof="No">
+            <video muted loop src="src/img/Taurus.mp4" alt="Taurus"></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Royal Enfield Taurus</span> -
+              <span class="bike-year">1908</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                ​The Royal Enfield Taurus, introduced in 1993, holds the
+                distinction of being India's first and only mass-produced diesel
+                motorcycle. Powered by a 325cc air-cooled single-cylinder diesel
+                engine, it produced 6.5 horsepower and 15 Nm of torque, mated to
+                a 4-speed manual gearbox . Weighing 196 kg, it boasted
+                impressive fuel efficiency, achieving around 80–90 km/l .
+                However, its high vibrations, excessive noise, and black smoke
+                emissions led to its discontinuation in 2000, as it couldn't
+                meet evolving emission standards . Despite its brief production
+                run, the Taurus remains a unique chapter in Royal Enfield's
+                history.
+              </div>
+            </div>
+          </div>
+          <div class="grid-item" data-wheel="3" data-roof="No">
+            <video muted loop src="src/img/Ural.mp4" alt="Ural"></video>
+            <div class="grid-tem_text">
+              <span class="bike-name">Ural Motorcycle</span> -
+              <span class="bike-year">1950</span>
+              <div style="height: 40px"></div>
+              <div class="content">
+                Ural motorcycles are rugged, all-terrain bikes with a
+                distinctive sidecar configuration, powered by a 749cc or 806cc
+                air-cooled, 2-cylinder, 4-stroke engine producing around 41-45
+                horsepower. These motorcycles feature a 4-speed manual
+                transmission with a reverse gear and are available in both 2WD
+                and 1WD models, with the 2WD system engaging the sidecar wheel
+                for enhanced traction on rough terrains. Their steel frame and
+                independent suspension—telescopic forks at the front and
+                hydraulic shock absorbers at the rear—offer durability and
+                off-road capability. Ural bikes are equipped with drum brakes,
+                with disc brake options available for improved stopping power.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
